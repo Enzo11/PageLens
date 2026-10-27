@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PageLens report</title>
+  <link rel="icon" href="../icons/icon32.png">
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <div class="bar" role="toolbar" aria-label="Report actions">
+    <div class="bar-l"><img src="../icons/icon32.png" alt="" width="20" height="20"><b>PageLens</b><span class="bar-t" id="bar-title"></span></div>
+    <div class="bar-r">
+      <label class="bar-role">View as
+        <select id="role">
+          <option value="everyday">Everyday user</option>
+          <option value="designer">Designer</option>
+          <option value="developer">Developer</option>
+          <option value="security">Security</option>
+        </select>
+      </label>
+      <button type="button" id="dl-md">Markdown</button>
+      <button type="button" id="dl-html">HTML</button>
+      <button type="button" id="print" class="primary">Print / PDF</button>
+    </div>
+  </div>
+  <div id="root" aria-live="polite"><p class="loading">Loading report…</p></div>
+  <script src="../lib/color.js"></script>
+  <script src="../lib/tokens.js"></script>
+  <script src="../lib/score.js"></script>
+  <script src="../lib/headers.js"></script>
+  <script src="../lib/csp-builder.js"></script>
+  <script src="../lib/server-fixes.js"></script>
+  <script src="../lib/trackers.js"></script>
+  <script src="../lib/report.js"></script>
+  <script src="../content/analyze.js"></script>
+  <script src="../lib/pipeline.js"></script>
+  <script src="../github/github-mode.js"></script>
+  <script src="../github/forges.js"></script>
+  <script src="../github/packages.js"></script>
+  <script src="../lib/report-model.js"></script>
+  <script src="../lib/export-markdown.js"></script>
+  <script src="../lib/export-html.js"></script>
+  <script src="report.js"></script>
+</body>
+</html>

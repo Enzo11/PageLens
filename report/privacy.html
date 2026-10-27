@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PageLens privacy policy</title>
+<link rel="icon" href="../icons/icon32.png">
+<style>
+:root{--bg:#f6f6f9;--surface:#fff;--border:#e2e2ea;--text:#15151c;--muted:#565667;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0e0e13;--surface:#16161d;--border:#2a2a35;--text:#ececf3;--muted:#a6a6b8;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:36px 20px 60px}
+h1{font-size:28px;margin:0 0 6px} h2{font-size:18px;margin:28px 0 8px} p,li{color:var(--text)} i{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top} th{color:var(--muted);font-weight:600}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy policy</h1>
+<p><i>Last updated: 26 October 2026</i></p>
+<p>PageLens is a browser extension that analyses the page or GitHub repository you are looking at. It has no server and no account, and it collects nothing about you.</p>
+<h2>What PageLens reads</h2>
+<ul>
+<li><b>The current page</b>, only after you click the PageLens icon. It reads structure, styles, colours, fonts, links, image sizes, script and stylesheet addresses, and timing data that your browser already recorded.</li>
+<li><b>The page&#x27;s response headers</b>, through one ordinary request to the same address, sent <b>without your cookies</b>.</li>
+<li><b>Names</b> of cookies and local or session storage keys that page scripts can see. <b>Never their values.</b></li>
+<li><b>Cookie flags</b> (Secure, HttpOnly, SameSite, expiry), only if you click &quot;Check cookie flags&quot; and approve Chrome&#x27;s permission prompt. Values are discarded as soon as Chrome returns them.</li>
+<li><b>Public GitHub data</b> in GitHub mode, from <code>api.github.com</code> and <code>raw.githubusercontent.com</code>.</li>
+</ul>
+<p>PageLens never reads anything you type into forms, never sees passwords, and strips query strings and fragments from every address it reports.</p>
+<h2>What PageLens stores</h2>
+<p>Everything is stored in your browser (<code>chrome.storage.local</code>) on this computer only:</p>
+<ul>
+<li>Your settings (role, theme, history on or off).</li>
+<li><b>Scan history</b>: page address without query string, page title, scores and the titles of findings. Up to 12 checks per page and 60 pages. Turn it off or clear it in the History view.</li>
+<li>A one-hour cache of GitHub results, for the last 15 repositories.</li>
+</ul>
+<p>Nothing is synced, uploaded or shared.</p>
+<h2>Requests PageLens makes</h2>
+<table><thead><tr><th>When</th><th>To</th><th>What is sent</th></tr></thead><tbody><tr><td>You open PageLens on a page</td><td>That page&#x27;s own address</td><td>A plain GET without cookies, to read headers</td></tr><tr><td>GitHub mode</td><td><code>api.github.com</code>, <code>raw.githubusercontent.com</code></td><td>The repository name</td></tr><tr><td>You click &quot;Check security.txt&quot;</td><td><code>/.well-known/security.txt</code> on that site</td><td>A plain GET without cookies</td></tr><tr><td>You click &quot;Check security databases&quot;</td><td><code>api.scorecard.dev</code>, <code>api.osv.dev</code></td><td>The repository name and package names with versions</td></tr><tr><td>You click &quot;Open in Google Translate&quot;</td><td>translate.google.com, in a new tab</td><td>The repository address</td></tr></tbody></table>
+<p>&quot;Translate to English&quot; uses Chrome&#x27;s built-in translator, which runs on your device.</p>
+<h2>Contact</h2>
+<p>Questions or concerns: open an issue on the project&#x27;s GitHub repository.</p>
+</main>
+</body>
+</html>
